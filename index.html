@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="xapp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <!-- AngularJS -->
+    <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+    <!-- JS Scripts -->
+    <script type="text/javascript" src="app.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+
+<body ng-controller="xctrl">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">AngularJS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="card">
+        <div class="card-header">
+            Calculator
+        </div>
+        <div class="card-body">
+            <h2>{{operation}}</h2>
+            <input type="text" ng-model="valOne">
+            <input type="text" ng-model="valTwo">
+            <span> = </span>
+            <input type="text" value="{{result}}" disabled>
+            <br><br>
+            <div class="form-group">
+                <button type="button" class="btn btn-info" ng-click="operate(1)">+</button>
+                <button type="button" class="btn btn-info" ng-click="operate(2)">-</button>
+                <button type="button" class="btn btn-info" ng-click="operate(3)">*</button>
+                <button type="button" class="btn btn-info" ng-click="operate(4)">/</button>
+            </div>
+        </div>
+    </div>
+    <!-- Jquery Slim -->
+    <script src="node_modules/jquery-slim/dist/jquery.slim.min.js"></script>
+    <!-- Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <!-- Bootstrap -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/popper/resources/"></script>
+</body>
+
+</html>
